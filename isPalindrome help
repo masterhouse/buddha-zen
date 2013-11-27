@@ -1,0 +1,22 @@
+bool isPalindrome( char* pStr )
+{
+  if ( pStr == NULL )
+   return false;
+ 
+  char* pEnd = pStr;
+  while ( *pEnd != '\0' )
+    pEnd++;
+ 
+  pEnd--;
+ 
+  while(pEnd > pStr)
+  {
+    if ( *pEnd != *pStr )
+      return false;
+ 
+    pEnd--;
+    pStr++;
+  }
+ 
+  return true;
+}
